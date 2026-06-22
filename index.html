@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的 GitHub 圖片展示網頁</title>
+    <style>
+        body {
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            background-color: #f1f5f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #1e3a8a;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>🖼️ 我的 GitHub 圖片展示</h1>
+    <p>這張圖片已經成功從 GitHub 讀取並顯示囉！</p>
+    
+    <!-- 【推薦方法一】相對路徑：如果 HTML 和圖片放在 GitHub 同一個資料夾 -->
+    <img src="115.jpg" alt="115學年度教科書">
+
+    <!-- 【方法二】絕對路徑：如果圖片在 GitHub，但網頁要放在其他地方，請用以下格式（請將註解打開並替換網址） -->
+    <!-- <img src="https://raw.githubusercontent.com/您的帳號/您的倉庫名稱/main/my-image.png" alt="我的校園生活照"> -->
+</div>
+
+</body>
+</html>
