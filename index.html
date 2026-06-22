@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-      <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
         body {
             font-family: "Microsoft JhengHei", Arial, sans-serif;
             background-color: #f1f5f9;
             display: flex;
             justify-content: center;
-            align-items: center;
+            /* 👇 修正：改為 flex-start 讓卡片往上靠，不再死死置中 */
+            align-items: flex-start; 
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
+            /* 👇 修正：上方固定留白 40px，左右和下方維持 20px，畫面更精緻 */
+            padding: 40px 20px 20px 20px;
+            box-sizing: border-box; /* 確保 padding 不會撐破版面 */
         }
         .card {
             background: #ffffff;
@@ -37,17 +42,17 @@
             border-radius: 8px;
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            display: block; /* 移除圖片底部的微小空隙 */
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
 <div class="card">
-      <!-- 【推薦方法一】相對路徑：如果 HTML 和圖片放在 GitHub 同一個資料夾 -->
+    <!-- 【推薦方法一】相對路徑：如果 HTML 和圖片放在 GitHub 同一個資料夾 -->
     <img src="https://raw.githubusercontent.com/gemini115/textbook/main/115.jpg" alt="115學年度教科書">
-
-    <!-- 【方法二】絕對路徑：如果圖片在 GitHub，但網頁要放在其他地方，請用以下格式（請將註解打開並替換網址） -->
+    <!-- 【方法二】絕對路徑 -->
     <!-- <img src="https://raw.githubusercontent.com/您的帳號/您的倉庫名稱/main/my-image.png" alt="我的校園生活照"> -->
 </div>
-
 </body>
 </html>
